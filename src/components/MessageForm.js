@@ -84,7 +84,7 @@ function MessageForm() {
                                             {
                                                 sender.picture ? <img src={sender.picture} style={{ width: 35, height: 35, objectFit: "cover", borderRadius: "50%", marginRight: 10 }} />
                                                     :
-                                                    <div className="ms-0 me-2" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "38px", height: "38px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "5px" }} >
+                                                    <div className="ms-0 me-2 mx-auto" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "38px", height: "38px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "5px" }} >
                                                         {sender.name[0]}
                                                     </div>
                                             }
