@@ -58,15 +58,17 @@ function MessageForm() {
                 {user && privateMemberMsg?._id && (
                     <>
                         <div className="alert alert-info conversation-info">
-                            <div>
+                            <div className="d-flex justify-content-center align-items-center mt-3 me-2">
+                                <div>You are conversation with {privateMemberMsg.name}</div>
                                 {
                                     privateMemberMsg.picture ? <img src={privateMemberMsg.picture} className="conversation-profile-pic" />
                                         :
-                                        <div className="mx-auto mt-3" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "40px", height: "40px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "6px" }} >
+
+                                        <div className="ms-2" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "40px", height: "40px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "6px" }} >
                                             {privateMemberMsg.name[0]}
                                         </div>
-                                }
 
+                                }
                             </div>
                         </div>
                     </>
