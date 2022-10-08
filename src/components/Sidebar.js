@@ -91,7 +91,14 @@ function Sidebar() {
                         <ListGroup.Item key={member.id} style={{ cursor: "pointer" }} active={privateMemberMsg?._id == member?._id} onClick={() => handlePrivateMemberMsg(member)} disabled={member._id === user._id}>
                             <Row>
                                 <Col xs={2} className="member-status">
-                                    <img src={member.picture} className="member-status-img" />
+                                    {
+                                        member.picture ? <img src={member.picture} className="member-status-img" />
+                                            :
+                                            <div className="mx-auto ms-0" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "30px", height: "30px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "2px" }} >
+                                                {member.name[0]}
+                                            </div>
+                                    }
+
                                     {member.status == "online" ? <i className="fas fa-circle sidebar-online-status"></i> : <i className="fas fa-circle sidebar-offline-status"></i>}
                                 </Col>
                                 <Col xs={9}>

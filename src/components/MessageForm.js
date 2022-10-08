@@ -59,7 +59,14 @@ function MessageForm() {
                     <>
                         <div className="alert alert-info conversation-info">
                             <div>
-                                Your conversation with {privateMemberMsg.name} <img src={privateMemberMsg.picture} className="conversation-profile-pic" />
+                                {
+                                    privateMemberMsg.picture ? <img src={privateMemberMsg.picture} className="conversation-profile-pic" />
+                                        :
+                                        <div className="mx-auto mt-3" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "40px", height: "40px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "6px" }} >
+                                            {privateMemberMsg.name[0]}
+                                        </div>
+                                }
+
                             </div>
                         </div>
                     </>
@@ -74,7 +81,13 @@ function MessageForm() {
                                 <div className={sender?.email == user?.email ? "message" : "incoming-message"} key={msgIdx}>
                                     <div className="message-inner">
                                         <div className="d-flex align-items-center mb-3">
-                                            <img src={sender.picture} style={{ width: 35, height: 35, objectFit: "cover", borderRadius: "50%", marginRight: 10 }} />
+                                            {
+                                                sender.picture ? <img src={sender.picture} style={{ width: 35, height: 35, objectFit: "cover", borderRadius: "50%", marginRight: 10 }} />
+                                                    :
+                                                    <div className="ms-0 me-2" style={{ backgroundColor: "purple", border: "0.5px solid gray", width: "38px", height: "38px", borderRadius: "50%", color: "white", textAlign: "center", paddingTop: "5px" }} >
+                                                        {sender.name[0]}
+                                                    </div>
+                                            }
                                             <p className="message-sender">{sender._id == user?._id ? "You" : sender.name}</p>
                                         </div>
                                         <p className="message-content">{content}</p>

@@ -41,9 +41,9 @@ function Navigation() {
                                 title={
                                     <>
                                         {
-                                            user.picture ? <img src={user.picture} style={{ width: 30, height: 30, marginRight: 10, objectFit: "cover", borderRadius: "50%" }} />
+                                            user.picture ? <img src={user.picture} style={{ width: 35, height: 35, marginRight: 10, objectFit: "cover", borderRadius: "50%" }} />
                                                 :
-                                                <span className="px-2" style={{ width: "30px", height: "30px", marginRight: 10, borderRadius: "50%", border: "1px solid gray", backgroundColor: "coral", color: "white", textTransform: "uppercase" }}>
+                                                <span className="px-3 py-2" style={{ width: "10rem", height: 40, borderRadius: "50%", border: "0.2px solid gray", backgroundColor: "purple", marginRight: "10px", color: "white", textTransform: "uppercase" }}>
                                                     {user.name[0]}
                                                 </span>
                                         }
