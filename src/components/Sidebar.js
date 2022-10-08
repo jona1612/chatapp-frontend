@@ -44,7 +44,7 @@ function Sidebar() {
     });
 
     function getRooms() {
-        fetch("http://localhost:5000/rooms")
+        fetch("https://jonathan-chatapp.herokuapp.com/rooms")
             .then((res) => res.json())
             .then((data) => setRooms(data));
     }
