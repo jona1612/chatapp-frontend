@@ -44,7 +44,7 @@ function Sidebar() {
     });
 
     function getRooms() {
-        fetch("https://jonathan-chatapp.herokuapp.com/rooms")
+        fetch("https://chatapp-jonathan.vercel.app/rooms")
             .then((res) => res.json())
             .then((data) => setRooms(data));
     }
